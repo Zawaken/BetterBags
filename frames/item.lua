@@ -75,7 +75,8 @@ function itemProto:UpdateSearch(text)
   local lowerText = string.lower(text)
   if string.find(string.lower(self.data.itemInfo.itemName), lowerText, 1, true) or
   string.find(string.lower(self.data.itemInfo.itemType), lowerText, 1, true) or
-  string.find(string.lower(self.data.itemInfo.itemSubType), lowerText, 1, true) then
+  string.find(string.lower(self.data.itemInfo.itemSubType), lowerText, 1, true) or
+  string.find(string.lower(self.data.itemInfo.itemEquipLoc), lowerText, 1, true) then
     self.button:SetMatchesSearch(true)
     return
   end
